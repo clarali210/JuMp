@@ -8,20 +8,20 @@ music.play(-1)
 
 ## let player choose from 4 backgrounds
 s = input("Choose your background, input 1, 2, 3, or 4 --> ")
-if s == "1":
+if s == 1:
     screen.background = "background.jpg"
-if s == "2":
+if s == 2:
     screen.background = "background2.jpg"
-if s == "3":
+if s == 3:
     screen.background = "background3.jpg"
-if s == "4":
+if s == 4:
     screen.background = "background4.jpg"
 
 ## one or two player game
 p = input("How many players, input 1 or 2 --> ")
-if p == "1":
+if p == 1:
     mode = "one"
-elif p == "2":
+elif p == 2:
     mode = "two"
 
 ## let player choose the size of the ball
@@ -29,11 +29,11 @@ ball = Sprite(
     image="ball.png", x=screen.width / 2, bottom=screen.height / 4, dy=-7)
 
 b = input("Choose your player, input 1, 2, or 3 --> ")
-if b == "1":
+if b == 1:
     ball.image = "ball.png"
-if b == "2":
+if b == 2:
     ball.image = "ball_medium.png"
-if b == "3":
+if b == 3:
     ball.image = "ball_large.png"
 
 if mode == "two":
@@ -41,11 +41,11 @@ if mode == "two":
     ball0 = Sprite(
         image="ball.png", x=screen.width / 4, bottom=screen.height / 4, dy=-7)
     b0 = input("2. Choose your player, input 1, 2, or 3 --> ")
-    if b0 == "1":
+    if b0 == 1:
         ball.image = "ball.png"
-    if b0 == "2":
+    if b0 == 2:
         ball.image = "ball_medium.png"
-    if b0 == "3":
+    if b0 == 3:
         ball.image = "ball_large.png"
 
 ## let player choose the ground
@@ -55,9 +55,9 @@ ground = Sprite(
     bottom=randrange(ball.bottom, screen.height))
 
 g = input("Choose a platform, input 1 or 2 --> ")
-if g == "1":
+if g == 1:
     ground.image = "ground.png"
-if g == "2":
+if g == 2:
     ground.image = "ground2.png"
 
 if mode == "two":
@@ -66,31 +66,31 @@ if mode == "two":
         right=randrange(50, screen.width),
         bottom=randrange(ball.bottom, screen.height))
     g0 = input("2. Choose a platform, input 1 or 2 --> ")
-    if g0 == "1":
+    if g0 == 1:
         ground0.image = "ground.png"
-    if g0 == "2":
+    if g0 == 2:
         ground0.image = "ground2.png"
 
 ## let player choose the color of the text
 c = input("Choose the color of text, input 1, 2, 3, or 4 --> ")
-if c == "1":
+if c == 1:
     COLOR = blue
-if c == "2":
+if c == 2:
     COLOR = red
-if c == "3":
+if c == 3:
     COLOR = black
-if c == "4":
+if c == 4:
     COLOR = dark_gray
 
 if mode == "two":
     c0 = input("2. Choose the color of text, input 1, 2, 3, or 4 --> ")
-    if c0 == "1":
+    if c0 == 1:
         COLOR0 = blue
-    if c0 == "2":
+    if c0 == 2:
         COLOR0 = red
-    if c0 == "3":
+    if c0 == 3:
         COLOR0 = black
-    if c0 == "4":
+    if c0 == 4:
         COLOR0 = dark_gray
 
 ## text displayed in the game
